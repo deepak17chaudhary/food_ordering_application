@@ -6,6 +6,9 @@ const Body = () => {
 
   return (
     <div className="body">
+    <div className="Restaurent-List">
+      <h1>Restaurent List</h1>
+    </div>
       <div className="filter">
         <button
           className="filter-btn"

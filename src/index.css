@@ -92,3 +92,8 @@ font-size: 15px;
   font-size: 15px;
   font-weight: bold;
 }
+.Restaurent-List{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
