@@ -7,14 +7,15 @@ const RestaurentCard = ({ resData }) => {
     return (
       <div className="res-card">
         <img className="res-card-image" src={image.url} alt="not available" />
-        <h1>{name}</h1>
+        <h1 className = "res-title">{name}</h1>
         <h1>
           <span
           
             style={{
               backgroundColor: ratingColor,
               color: "white",
-              fontSize: "15px",
+              fontSize: "10px",
+              padding : "4px"
             }}
           >
             {rating.rating_text}★

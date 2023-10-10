@@ -4,7 +4,7 @@ const Header = () => {
         <div className="logo-container">
           <img
             className="logo"
-            src="https://logolook.net/wp-content/uploads/2023/04/Swiggy-Emblem.png"
+            src="https://indifoodbev.com/wp-content/uploads/2022/03/services-bike-25b97ce6cfe032fd51c72a44b4f72c282d64875800fe1932c4e6b98f6fb928f4.png"
             alt="no preview"
           />
         </div>
