@@ -1,5 +1,5 @@
 
-import Applayout from './Applayout.js';
+import Applayout from './components/Applayout.js';
 
 function App() {
   return (
