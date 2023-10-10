@@ -1,4 +1,5 @@
 
+
 const RestaurentCard = ({ resData }) => {
     const { name, image, rating, locality, cuisine } = resData?.info || {};
   
@@ -23,7 +24,7 @@ const RestaurentCard = ({ resData }) => {
         </h1>
         <h1>{rating.rating_subtitle}</h1>
         <h1>{cuisines}</h1>
-        <h1>{locality.name}</h1>
+        <h1> {locality.name}</h1>
       </div>
     );
   };
