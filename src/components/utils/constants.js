@@ -2,5 +2,5 @@
 
 // its a good practice to write Constants in capital letters.
 
- export const LOGO_URL = "https://indifoodbev.com/wp-content/uploads/2022/03/services-bike-25b97ce6cfe032fd51c72a44b4f72c282d64875800fe1932c4e6b98f6fb928f4.png";    /*Named Export*/
+ export const LOGO_URL = "https://learn-react-with-harshi-chapter-12.netlify.app/logo-main.9b031605.png";    /*Named Export*/
 
