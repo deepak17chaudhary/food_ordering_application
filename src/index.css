@@ -67,7 +67,7 @@ font-size: 15px;
   margin: 0 auto;
   padding-top: 42px;
   position: relative;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 
