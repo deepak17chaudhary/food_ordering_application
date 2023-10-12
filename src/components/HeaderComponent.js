@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse,faAddressCard,faCartShopping,faAddressBook} from '@fortawesome/free-solid-svg-icons';
 import { LOGO_URL } from "./utils/constants";
 const Header = () => {
     return (
@@ -11,10 +13,10 @@ const Header = () => {
         </div>
         <div className="nav-items">
           <ul>
-            <li>Home</li>
-            <li>About us</li>
-            <li>Contact us</li>
-            <li>cart</li>
+            <li><FontAwesomeIcon icon={faHouse} /> Home</li>
+            <li><FontAwesomeIcon icon={faAddressCard} /> About</li>
+            <li><FontAwesomeIcon icon={faAddressBook} /> Contact</li>
+            <li><FontAwesomeIcon icon={faCartShopping} /> Cart</li>
           </ul>
         </div>
       </div>
