@@ -4,3 +4,4 @@
 
  export const LOGO_URL = "https://learn-react-with-harshi-chapter-12.netlify.app/logo-main.9b031605.png";    /*Named Export*/
 
+export const RES_CARD_IMAGE_URL  = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";

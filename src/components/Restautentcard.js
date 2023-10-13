@@ -1,13 +1,19 @@
+import { RES_CARD_IMAGE_URL } from "./utils/constants";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot} from '@fortawesome/free-solid-svg-icons';
 
 
 const RestaurentCard = ({ resData }) => {
-    const { name, image, rating, locality, cuisine } = resData?.info || {};
-  
-    const ratingColor = Number(rating.rating_text) > 4 ? "green" : "red";
-    const cuisines = cuisine.map((cuisine) => cuisine.name).join(", ");
+
+    const { name, cloudinaryImageId, avgRating, locality, cuisines,costForTwo,totalRatingsString } = resData?.info || {};
+    console.log('resData',resData);
+
+    const ratingColor = Number(avgRating) > 4 ? "green" : "red";
+    //const cuisines = cuisine.map((cuisine) => cuisine.name).join(", ");
+   const cuisine = cuisines.join(', ');
     return (
       <div className="res-card">
-        <img className="res-card-image" src={image.url} alt="not available" />
+        <img className="res-card-image" src= {RES_CARD_IMAGE_URL + cloudinaryImageId} alt="not available" />
         <h1 className = "res-title">{name}</h1>
         <h1>
           <span
@@ -19,14 +25,16 @@ const RestaurentCard = ({ resData }) => {
               padding : "4px"
             }}
           >
-            {rating.rating_text}★
+            {avgRating}★ 
           </span>
+          <span> - ({totalRatingsString})</span>
         </h1>
-        <h1>{rating.rating_subtitle}</h1>
-        <h1>{cuisines}</h1>
-        <h1> {locality.name}</h1>
+        <h1>{cuisine}</h1>
+        <h1><FontAwesomeIcon icon={faLocationDot} /> {locality}</h1>
+        <h1>{costForTwo}</h1>
       </div>
     );
+    
   };
   
  
