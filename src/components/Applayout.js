@@ -1,11 +1,10 @@
-import Body from './BodyComponent';
-import Header from './HeaderComponent';
+import Body from "./BodyComponent";
+import Header from "./HeaderComponent";
 const Applayout = () => {
   return (
     <div className="applayout">
-     
-      { <Header />}
-    <Body />
+      {<Header />}
+      <Body />
     </div>
   );
 };

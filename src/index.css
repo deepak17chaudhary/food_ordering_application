@@ -38,13 +38,13 @@
 }
 
 body {
-  /* height: 100vh;  */
+
   margin: 0px;
   padding: 0px;
-  /* overflow: hidden; */
+ 
 }
 .res-card {
-  width: 22%;
+  width: 250px;
   height: auto;
   border-radius: 5px;
   font-size: 5px;
@@ -95,9 +95,22 @@ body {
 }
 
 .filter-btn {
-  margin: 20px;
+  margin: 10px 15px;
   font-size: 15px;
   font-weight: bold;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #FFB703; 
+  border: 1px solid #FFB703;
+  border-radius: 5px; 
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #FFB703;
+    color: #fff; /* Change text color to white */
+  }
 }
 .Restaurant-List {
   display: flex;
@@ -142,4 +155,63 @@ padding: 20px;;
   }
 }
 
+.login-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FFB703; 
+  color: #fff; 
+  border: none;
+  border-radius: 5px; 
+  font-size: 16px; 
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+  min-width: 100px;
+}
 
+.login-button:hover {
+  background-color: #DAA200; 
+}
+
+.Restaurant-List {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the search container */
+.search-container {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Style the input box */
+.input-box {
+  padding: 5px;
+  width: 450px;
+  border: 2px solid #FFB703; 
+  border-radius: 0px;
+  font-size: 16px;
+  height: 40px; 
+  outline: none;
+  margin: 0;
+}
+
+/* Style the search button */
+.search-btn {
+  background-color: #FFB703; 
+  color: #fff;
+  padding: 5px 40px;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  font-size: 16px;
+  height: 54px; 
+  margin: 0; 
+}
+
+
+.filter {
+  margin: 0 210px;
+}
