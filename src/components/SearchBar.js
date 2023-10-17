@@ -14,7 +14,8 @@ const SearchComponent = ({ searchData,setSearchedRestaurent }) => {
 
   // on click function for search button
   const onClicksearchText = () => {
-    const filteredListofRestaurent = searchData.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()));
+    console.log('searchData',searchData);
+    const filteredListofRestaurent = searchData.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()) || res.info.cuisines.some(category => category.toLowerCase().includes(searchText.toLowerCase())) );
 //console.log("filter restaurent",filteredListofRestaurent);
     setSearchedRestaurent(filteredListofRestaurent);  // sending data back from child to parent
   };
