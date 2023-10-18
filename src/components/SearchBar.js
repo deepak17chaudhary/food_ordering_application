@@ -2,11 +2,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-const SearchComponent = ({ searchData,setSearchedRestaurent }) => {
+const SearchComponent = ({ searchData, setSearchedRestaurent }) => {
   const [searchText, setSearchText] = useState("");
 
-
-// console.log("searchData1", searchData)
   //onChangeSearchText function
   const onChangeSearchText = (e) => {
     setSearchText(e.target.value);
@@ -14,10 +12,14 @@ const SearchComponent = ({ searchData,setSearchedRestaurent }) => {
 
   // on click function for search button
   const onClicksearchText = () => {
-    console.log('searchData',searchData);
-    const filteredListofRestaurent = searchData.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()) || res.info.cuisines.some(category => category.toLowerCase().includes(searchText.toLowerCase())) );
-//console.log("filter restaurent",filteredListofRestaurent);
-    setSearchedRestaurent(filteredListofRestaurent);  // sending data back from child to parent
+    const filteredListofRestaurent = searchData.filter(
+      (res) =>
+        res.info.name.toLowerCase().includes(searchText.toLowerCase()) ||
+        res.info.cuisines.some((category) =>
+          category.toLowerCase().includes(searchText.toLowerCase())
+        )
+    );
+    setSearchedRestaurent(filteredListofRestaurent); // sending data back from child to parent
   };
 
   return (
@@ -28,10 +30,9 @@ const SearchComponent = ({ searchData,setSearchedRestaurent }) => {
         className="input-box"
         value={searchText}
         onChange={onChangeSearchText}
-       
       />
       <button className="search-btn" onClick={onClicksearchText}>
-        <FontAwesomeIcon icon={faMagnifyingGlass}  />
+        <FontAwesomeIcon icon={faMagnifyingGlass} />
       </button>
     </div>
   );

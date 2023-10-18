@@ -1,7 +1,17 @@
-// when we have to export multiple varibales/ functions, then we need to use named export. we can write export directly in front of the variables and functions which need to be exported.
+export const LOGO_URL =
+  "https://learn-react-with-harshi-chapter-12.netlify.app/logo-main.9b031605.png"; /*Named Export*/
 
-// its a good practice to write Constants in capital letters.
+export const RES_CARD_IMAGE_URL =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
- export const LOGO_URL = "https://learn-react-with-harshi-chapter-12.netlify.app/logo-main.9b031605.png";    /*Named Export*/
+export const RESTAURANT_LIST_MAIN_API =
+  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.611248758108047&lng=77.21520349640122&is-seo-homepage-enabled=true&page_type=DESKTOP_";
 
-export const RES_CARD_IMAGE_URL  = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+export const RESTAURANT_MENU_LOGO_IMAGE_URL =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+
+export const RESTAURANT_MENU_ITEMS_IMAGE =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/";
+
+export const RESTAURANT_MENU_API =
+  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6318545&lng=77.2203533&restaurantId=";

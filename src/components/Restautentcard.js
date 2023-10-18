@@ -12,10 +12,8 @@ const RestaurentCard = ({ resData }) => {
     costForTwo,
     totalRatingsString,
   } = resData?.info || {};
-  //console.log("resData", resData);
 
   const ratingColor = Number(avgRating) > 4 ? "green" : "red";
-  //const cuisines = cuisine.map((cuisine) => cuisine.name).join(", ");
   const cuisine = cuisines.join(", ");
   return (
     <div className="res-card">

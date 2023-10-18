@@ -2,6 +2,8 @@ import RestaurentCard from "./Restautentcard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import SearchComponent from "./SearchBar";
+import { Link } from "react-router-dom";
+import { RESTAURANT_LIST_MAIN_API } from "./utils/constants";
 
 const Body = () => {
   const [ListofRestaurent, setListofRestaurent] = useState([]);
@@ -12,26 +14,21 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      // "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.611248758108047&lng=77.21520349640122&is-seo-homepage-enabled=true&page_type=DESKTOP_"
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6460176&lng=77.3695166&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
-    const json = await data.json();
+    const data = await fetch(RESTAURANT_LIST_MAIN_API);
+    const jsonData = await data.json();
     // Applying check for the existence of data,to determine in wwhich obj data is available
 
-    const api_data_strings = ["restaurant_grid_listing", "top_brands_for_you"];
+    const api_data_strings = "restaurant_grid_listing";
 
-    const restaurantCards = json?.data?.cards.filter((card) =>
-      api_data_strings.includes(card.card.card.id)
+    const restaurantCard = jsonData?.data?.cards.find(
+      (card) => card.card.card.id === api_data_strings
     );
 
-    const updatedList = restaurantCards.reduce((list, card) => {
-      return list.concat(card.card.card.gridElements.infoWithStyle.restaurants);
-    }, []);
+    let finalData =
+      restaurantCard.card.card.gridElements.infoWithStyle.restaurants;
 
-    const uniqueRestaurants = [...updatedList];
-    setListofRestaurent(uniqueRestaurants);
-    setfilteredListofRestaurent(uniqueRestaurants);
+    setListofRestaurent(finalData);
+    setfilteredListofRestaurent(finalData);
   };
 
   const handleSearch = (filteredData) => {
@@ -74,7 +71,12 @@ const Body = () => {
           <div className="res-body">
             {filteredListofRestaurent.map((restaurent) => {
               return (
-                <RestaurentCard key={restaurent.info.id} resData={restaurent} />
+                <Link
+                  key={restaurent.info.id}
+                  to={"/restaurants/" + restaurent.info.id}
+                >
+                  <RestaurentCard resData={restaurent} />
+                </Link>
               );
             })}
           </div>

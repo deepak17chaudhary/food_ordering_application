@@ -1,17 +1,18 @@
+// import Body from "./components/BodyComponent";
+import Footer from "./components/Footer";
+import Header from "./components/HeaderComponent";
+import { Outlet } from "react-router-dom";
 
-import Applayout from './components/Applayout.js';
-
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div className="App-container">
       <header className="App-header">
-      
-    <Applayout />
-       
+        <Header />
+        <Outlet />
+        <Footer />
       </header>
     </div>
   );
-}
+};
 
 export default App;
