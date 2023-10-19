@@ -14,7 +14,8 @@ const RestaurentCard = ({ resData }) => {
   } = resData?.info || {};
 
   const ratingColor = Number(avgRating) > 4 ? "green" : "red";
-  const cuisine = cuisines.join(", ");
+  let cuisine = cuisines.join(", ");
+  cuisine = cuisine.length > 40 ? cuisine.substring(0, 30) : cuisine + "....";
   return (
     <div className="res-card">
       <img

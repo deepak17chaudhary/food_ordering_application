@@ -15,3 +15,7 @@ export const RESTAURANT_MENU_ITEMS_IMAGE =
 
 export const RESTAURANT_MENU_API =
   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6318545&lng=77.2203533&restaurantId=";
+
+  export const VEG_ICON_IMAGE = "https://freesvg.org/img/1531813273.png";
+
+  export const NON_VEG_ICON_IMAGE = "https://freesvg.org/img/1531813245.png";
