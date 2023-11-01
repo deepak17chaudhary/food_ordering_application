@@ -455,7 +455,7 @@ body {
 }
 
 .Restaurant-logo {
-  max-width: 200px;
+  max-width: 300px;
   max-height: 200px;
   margin: 20px;
   border-radius: 5px;
@@ -469,7 +469,7 @@ body {
 .menu-item-details {
   text-overflow: ellipsis;
   white-space: wrap;
-  width: 800px;
+  width: 700px;
   max-height: 2.4em;
   line-height: 1.2em;
   margin-right: 80px;
@@ -490,17 +490,18 @@ body {
 }
 
 .add-button {
-  background-color: #0074cc;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
+  background-color: #fff;
+  color: #daa200;
+  border: 1px solid #daa200;
+  padding: 5px 20px;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  /* transition: background-color 0.3s; */
 
   &:hover {
-    background-color: #0056a7;
+    transition: background-color 0.3s;
+    transform: scale(1.05);
   }
 }
 
@@ -528,3 +529,21 @@ body {
 .menu-item-description {
   padding-bottom: 3px;
 }
+
+.counter-button {
+  background-color: #fff; 
+  color: #daa200; 
+  border: 1px solid #daa200;
+  padding: 10px 10px; 
+  border-radius: 5px; 
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+.counter-text {
+  margin : 7px;
+  font-size: 20px;
+  font-weight: 700;
+}
+

@@ -16,7 +16,6 @@ const Body = () => {
   const fetchData = async () => {
     const data = await fetch(RESTAURANT_LIST_MAIN_API);
     const jsonData = await data.json();
-    
     // Applying check for the existence of data,to determine in wwhich obj data is available
 
     const api_data_strings = "restaurant_grid_listing";
